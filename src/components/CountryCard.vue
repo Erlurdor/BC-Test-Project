@@ -17,7 +17,7 @@
                 class="title"
             >
               <div :title=country.title>
-                  {{ getTitle(country.title) }}
+                  {{ country.getCompactTitle() }}
               </div>
             </b-card-title>
           </b-col>
@@ -42,7 +42,7 @@
           <b-col cols="6">
             <b-card-body class="bodyValue leftAlign">
               <div :title=country.capital.toString()>
-                {{ getCardText(country.capital.toString()) }}
+                {{ country.getCompactCapital() }}
               </div>
             </b-card-body>
           </b-col>
@@ -79,54 +79,16 @@
 </template>
 
 <script>
-import CountryInfo from "@/CountryInfo";
+import Country from "@/Country";
 
 export default {
-  name: "CardComponent",
+  name: "CountryCard",
   props: {
-    country: CountryInfo
+    country: Country
   },
-  methods: {
-    getTitle(text) {
-      return getCompactText(text, 13)
-    },
-    getCardText(text) {
-      return getCompactText(text, 10)
-    },
-    // getCurCountry() {
-    //   return this.country
-    // },
-    // editCountry() {
-    //   this.$router.push({
-    //     name: 'Edit',
-    //     params: {
-    //         country: this.country,
-    //         test1: 'teeee'
-    //
-    //     }
-    //   })
-      // this.$router.push({
-      //   name:'Edit',
-      //   params:{id: this.country.id}, props: {test1: this.country.title}
-      // })
-      // this.$router.push({name:'Edit', params:{country:country}})
-    // }
-
-  }
-}
-
-function getCompactText(text, len) {
-  const requiredLength = len;
-  const add = '...'
-
-  if (text.length > requiredLength)
-    return text.substring(0, requiredLength - add.length) + add
-
-  return text
 }
 
 </script>
-
 <style scoped>
   .card {
     margin-bottom: 2rem;

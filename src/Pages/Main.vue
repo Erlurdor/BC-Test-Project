@@ -16,7 +16,7 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import Card from "@/components/Card.vue";
+import Card from "@/components/CountryCard.vue";
 
 export default {
   name: "MainComponent",

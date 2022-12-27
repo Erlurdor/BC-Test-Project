@@ -60,7 +60,7 @@
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import CountryInfo from "@/CountryInfo";
+import Country from "@/Country";
 import router from "@/router";
 
 export default {
@@ -77,11 +77,11 @@ export default {
     }
   },
   props: {
-    country: CountryInfo
+    country: Country
   },
   methods: {
     onSubmit() {
-      let changedCountry = new CountryInfo(
+      let changedCountry = new Country(
           this.country.id,
           this.country.image,
           this.countryForm.title,

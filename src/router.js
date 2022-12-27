@@ -1,6 +1,6 @@
 import VueRouter from "vue-router";
 import Main from "@/Pages/Main.vue";
-import Edit from "@/Pages/Edit.vue";
+import Edit from "@/Pages/CountryEdit.vue";
 import Vue from "vue";
 
 Vue.use(VueRouter);
