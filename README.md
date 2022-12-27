@@ -1,4 +1,4 @@
-# test-project-billing-center
+# Тестовый проект для компании Биллинговый Центр
 
 ## Project setup
 ```
